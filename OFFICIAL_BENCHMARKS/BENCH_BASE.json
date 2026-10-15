@@ -1,0 +1,678 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "PYPSA",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\ELECTRICITY_MANAGEMENT\\PYPSA\\UPSTREAM_CLONE",
+    "git": {
+      "head": "ae2ce7f73dea3c86502f64155af7859c213f9bf5",
+      "url": "https://github.com/PyPSA/PyPSA",
+      "branch": "master",
+      "committed_at": "2026-10-02T11:30:13+02:00"
+    }
+  },
+  "metrics": {
+    "files_total": 141,
+    "source_files_scanned": 88,
+    "lines_of_code": 44175,
+    "languages": {
+      ".py": 88,
+      ".csv": 22,
+      ".yml": 10,
+      ".yaml": 4,
+      ".md": 4,
+      "(none)": 3,
+      ".toml": 3,
+      ".txt": 2,
+      ".ignore": 1,
+      ".cff": 1,
+      ".in": 1,
+      ".lock": 1,
+      ".typed": 1
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 19,
+    "unique": 19,
+    "by_ecosystem": {
+      "pypi": 19
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "numpy",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "numpy"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "scipy",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "scipy"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "pandas",
+        "version": ">=3.0",
+        "source_file": "pyproject.toml",
+        "raw": "pandas>=3.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "pyarrow",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "pyarrow"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "xarray",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "xarray"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "netcdf4",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "netcdf4"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "linopy",
+        "version": ">=0.9.0",
+        "source_file": "pyproject.toml",
+        "raw": "linopy>=0.9.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "matplotlib",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "matplotlib"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "plotly",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "plotly"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "pydeck",
+        "version": ">=0.6",
+        "source_file": "pyproject.toml",
+        "raw": "pydeck>=0.6"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "seaborn",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "seaborn"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "geopandas",
+        "version": ">=0.9",
+        "source_file": "pyproject.toml",
+        "raw": "geopandas>=0.9"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "shapely",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "shapely"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "networkx",
+        "version": ">=2",
+        "source_file": "pyproject.toml",
+        "raw": "networkx>=2"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "deprecation",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "deprecation"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "validators",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "validators"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "highspy",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "highspy"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "rapidfuzz",
+        "version": ">=3.9.0",
+        "source_file": "pyproject.toml",
+        "raw": "rapidfuzz>=3.9.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "platformdirs",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "platformdirs"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 31,
+    "files_with_findings": 27,
+    "severity": {
+      "high": 2,
+      "medium": 1,
+      "low": 28
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "pypsa/components/descriptors.py",
+            "line": 145,
+            "cwe": "CWE-95",
+            "snippet": "active[period] = self.static.eval("
+          },
+          {
+            "severity": "high",
+            "file": "pypsa/optimization/abstract.py",
+            "line": 365,
+            "cwe": "CWE-95",
+            "snippet": "* n.c.links.static.eval(\"p_nom_opt - p_nom_min\")"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 26,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "pypsa/collection.py",
+            "line": 538,
+            "cwe": "CWE-",
+            "snippet": "# TODO: `snapshots` uses return_from_first, which assumes all"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/common.py",
+            "line": 272,
+            "cwe": "CWE-",
+            "snippet": "# TODO: This ambiguity should be resolved"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/consistency.py",
+            "line": 999,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Check for bidirectional links with efficiency < 1."
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/guards.py",
+            "line": 78,
+            "cwe": "CWE-",
+            "snippet": "# TODO n.sub_networks needs a fix"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/networks.py",
+            "line": 251,
+            "cwe": "CWE-",
+            "snippet": "# TODO make this actually for the REPL"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/clustering/spatial.py",
+            "line": 986,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Remove this in favour of the more general approach below."
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/components/components.py",
+            "line": 59,
+            "cwe": "CWE-",
+            "snippet": "# TODO attachment todos"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/components/descriptors.py",
+            "line": 55,
+            "cwe": "CWE-",
+            "snippet": "# TODO if we expose this, this needs further refinment and checks, specially"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/components/store.py",
+            "line": 132,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Activate when changing logic"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/components/transform.py",
+            "line": 217,
+            "cwe": "CWE-",
+            "snippet": "col_name = self.name.lower()  # TODO: Generalize"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/components/types.py",
+            "line": 26,
+            "cwe": "CWE-",
+            "snippet": "# TODO better path handeling, integrate custom components"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/definitions/components.py",
+            "line": 75,
+            "cwe": "CWE-",
+            "snippet": "# TODO make this actually for the REPL"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/network/components.py",
+            "line": 41,
+            "cwe": "CWE-",
+            "snippet": "# TODO Change to UserWarning when they are all resolved and raised"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/network/graph.py",
+            "line": 120,
+            "cwe": "CWE-",
+            "snippet": "# TODO Resolve"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/network/io.py",
+            "line": 2597,
+            "cwe": "CWE-",
+            "snippet": "# TODO"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/network/power_flow.py",
+            "line": 47,
+            "cwe": "CWE-",
+            "snippet": "# TODO Remove"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/network/transform.py",
+            "line": 585,
+            "cwe": "CWE-",
+            "snippet": "# TODO fix with #1128"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/optimization/abstract.py",
+            "line": 245,
+            "cwe": "CWE-",
+            "snippet": "# TODO: move default value definition to main function (unnest)"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/optimization/expressions.py",
+            "line": 304,
+            "cwe": "CWE-",
+            "snippet": "# TODO"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/optimization/optimize.py",
+            "line": 1181,
+            "cwe": "CWE-",
+            "snippet": "# TODO This should go to an actual custom constraint"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/optimization/piecewise.py",
+            "line": 31,
+            "cwe": "CWE-",
+            "snippet": "# TODO: update to pydantic once pydantic is a pypsa dependency."
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/plot/maps/interactive.py",
+            "line": 2064,
+            "cwe": "CWE-",
+            "snippet": "# TODO: fix typing differences between PydeckPlotter.build_layers and explore function"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/plot/maps/static.py",
+            "line": 1127,
+            "cwe": "CWE-",
+            "snippet": "# TODO: This is not consistent, since for multiindex a ValueError is raised"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/plot/statistics/maps.py",
+            "line": 122,
+            "cwe": "CWE-",
+            "snippet": "# TODO solve circular import by refactoring to descriptors.py"
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/statistics/abstract.py",
+            "line": 104,
+            "cwe": "CWE-",
+            "snippet": "# TODO could be moved to Network"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "pypsa/network/power_flow.py",
+            "line": 574,
+            "cwe": "CWE-319",
+            "snippet": "\"\"\"Follows http://home.earthlink.net/~w6rmk/math/wyedelta.html."
+          },
+          {
+            "severity": "low",
+            "file": "pypsa/optimization/optimize.py",
+            "line": 1368,
+            "cwe": "CWE-319",
+            "snippet": "http://journal.frontiersin.org/article/10.3389/fenrg.2015.00055/full"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "pypsa/examples.py",
+            "line": 32,
+            "cwe": "CWE-918",
+            "snippet": "with urlopen(url) as response:  # noqa: S310"
+          }
+        ]
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 1,
+    "files_with_findings": 1,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "pypsa/guards.py",
+            "line": 5,
+            "cwe": "CWE-",
+            "snippet": "\"\"\"Assertion guards for runtime verification of PyPSA."
+          }
+        ]
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:a3878aee-4f18-5604-8bd1-29a6cb382e52",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-05T16:16:50Z",
+      "component": {
+        "type": "application",
+        "name": "PYPSA",
+        "version": "ae2ce7f73dea",
+        "bom-ref": "pkg:generic/anticloud/PYPSA@ae2ce7f73dea",
+        "purl": "pkg:generic/anticloud/PYPSA@ae2ce7f73dea",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "ae2ce7f73dea3c86502f64155af7859c213f9bf5"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/PyPSA/PyPSA"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "numpy",
+        "version": "unspecified",
+        "purl": "pkg:pypi/numpy",
+        "bom-ref": "pypi/numpy@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "scipy",
+        "version": "unspecified",
+        "purl": "pkg:pypi/scipy",
+        "bom-ref": "pypi/scipy@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "pandas",
+        "version": ">=3.0",
+        "purl": "pkg:pypi/pandas@3.0",
+        "bom-ref": "pypi/pandas@>=3.0"
+      },
+      {
+        "type": "library",
+        "name": "pyarrow",
+        "version": "unspecified",
+        "purl": "pkg:pypi/pyarrow",
+        "bom-ref": "pypi/pyarrow@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "xarray",
+        "version": "unspecified",
+        "purl": "pkg:pypi/xarray",
+        "bom-ref": "pypi/xarray@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "netcdf4",
+        "version": "unspecified",
+        "purl": "pkg:pypi/netcdf4",
+        "bom-ref": "pypi/netcdf4@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "linopy",
+        "version": ">=0.9.0",
+        "purl": "pkg:pypi/linopy@0.9.0",
+        "bom-ref": "pypi/linopy@>=0.9.0"
+      },
+      {
+        "type": "library",
+        "name": "matplotlib",
+        "version": "unspecified",
+        "purl": "pkg:pypi/matplotlib",
+        "bom-ref": "pypi/matplotlib@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "plotly",
+        "version": "unspecified",
+        "purl": "pkg:pypi/plotly",
+        "bom-ref": "pypi/plotly@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "pydeck",
+        "version": ">=0.6",
+        "purl": "pkg:pypi/pydeck@0.6",
+        "bom-ref": "pypi/pydeck@>=0.6"
+      },
+      {
+        "type": "library",
+        "name": "seaborn",
+        "version": "unspecified",
+        "purl": "pkg:pypi/seaborn",
+        "bom-ref": "pypi/seaborn@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "geopandas",
+        "version": ">=0.9",
+        "purl": "pkg:pypi/geopandas@0.9",
+        "bom-ref": "pypi/geopandas@>=0.9"
+      },
+      {
+        "type": "library",
+        "name": "shapely",
+        "version": "unspecified",
+        "purl": "pkg:pypi/shapely",
+        "bom-ref": "pypi/shapely@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "networkx",
+        "version": ">=2",
+        "purl": "pkg:pypi/networkx@2",
+        "bom-ref": "pypi/networkx@>=2"
+      },
+      {
+        "type": "library",
+        "name": "deprecation",
+        "version": "unspecified",
+        "purl": "pkg:pypi/deprecation",
+        "bom-ref": "pypi/deprecation@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "validators",
+        "version": "unspecified",
+        "purl": "pkg:pypi/validators",
+        "bom-ref": "pypi/validators@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "highspy",
+        "version": "unspecified",
+        "purl": "pkg:pypi/highspy",
+        "bom-ref": "pypi/highspy@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "rapidfuzz",
+        "version": ">=3.9.0",
+        "purl": "pkg:pypi/rapidfuzz@3.9.0",
+        "bom-ref": "pypi/rapidfuzz@>=3.9.0"
+      },
+      {
+        "type": "library",
+        "name": "platformdirs",
+        "version": "unspecified",
+        "purl": "pkg:pypi/platformdirs",
+        "bom-ref": "pypi/platformdirs@unspecified"
+      }
+    ]
+  },
+  "elapsed_seconds": 56.16
+}

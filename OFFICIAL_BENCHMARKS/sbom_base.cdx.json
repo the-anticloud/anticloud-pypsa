@@ -1,0 +1,172 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:a3878aee-4f18-5604-8bd1-29a6cb382e52",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-05T16:16:50Z",
+    "component": {
+      "type": "application",
+      "name": "PYPSA",
+      "version": "ae2ce7f73dea",
+      "bom-ref": "pkg:generic/anticloud/PYPSA@ae2ce7f73dea",
+      "purl": "pkg:generic/anticloud/PYPSA@ae2ce7f73dea",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "ae2ce7f73dea3c86502f64155af7859c213f9bf5"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/PyPSA/PyPSA"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "unspecified",
+      "purl": "pkg:pypi/numpy",
+      "bom-ref": "pypi/numpy@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "scipy",
+      "version": "unspecified",
+      "purl": "pkg:pypi/scipy",
+      "bom-ref": "pypi/scipy@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "pandas",
+      "version": ">=3.0",
+      "purl": "pkg:pypi/pandas@3.0",
+      "bom-ref": "pypi/pandas@>=3.0"
+    },
+    {
+      "type": "library",
+      "name": "pyarrow",
+      "version": "unspecified",
+      "purl": "pkg:pypi/pyarrow",
+      "bom-ref": "pypi/pyarrow@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "xarray",
+      "version": "unspecified",
+      "purl": "pkg:pypi/xarray",
+      "bom-ref": "pypi/xarray@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "netcdf4",
+      "version": "unspecified",
+      "purl": "pkg:pypi/netcdf4",
+      "bom-ref": "pypi/netcdf4@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "linopy",
+      "version": ">=0.9.0",
+      "purl": "pkg:pypi/linopy@0.9.0",
+      "bom-ref": "pypi/linopy@>=0.9.0"
+    },
+    {
+      "type": "library",
+      "name": "matplotlib",
+      "version": "unspecified",
+      "purl": "pkg:pypi/matplotlib",
+      "bom-ref": "pypi/matplotlib@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "plotly",
+      "version": "unspecified",
+      "purl": "pkg:pypi/plotly",
+      "bom-ref": "pypi/plotly@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "pydeck",
+      "version": ">=0.6",
+      "purl": "pkg:pypi/pydeck@0.6",
+      "bom-ref": "pypi/pydeck@>=0.6"
+    },
+    {
+      "type": "library",
+      "name": "seaborn",
+      "version": "unspecified",
+      "purl": "pkg:pypi/seaborn",
+      "bom-ref": "pypi/seaborn@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "geopandas",
+      "version": ">=0.9",
+      "purl": "pkg:pypi/geopandas@0.9",
+      "bom-ref": "pypi/geopandas@>=0.9"
+    },
+    {
+      "type": "library",
+      "name": "shapely",
+      "version": "unspecified",
+      "purl": "pkg:pypi/shapely",
+      "bom-ref": "pypi/shapely@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "networkx",
+      "version": ">=2",
+      "purl": "pkg:pypi/networkx@2",
+      "bom-ref": "pypi/networkx@>=2"
+    },
+    {
+      "type": "library",
+      "name": "deprecation",
+      "version": "unspecified",
+      "purl": "pkg:pypi/deprecation",
+      "bom-ref": "pypi/deprecation@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "validators",
+      "version": "unspecified",
+      "purl": "pkg:pypi/validators",
+      "bom-ref": "pypi/validators@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "highspy",
+      "version": "unspecified",
+      "purl": "pkg:pypi/highspy",
+      "bom-ref": "pypi/highspy@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "rapidfuzz",
+      "version": ">=3.9.0",
+      "purl": "pkg:pypi/rapidfuzz@3.9.0",
+      "bom-ref": "pypi/rapidfuzz@>=3.9.0"
+    },
+    {
+      "type": "library",
+      "name": "platformdirs",
+      "version": "unspecified",
+      "purl": "pkg:pypi/platformdirs",
+      "bom-ref": "pypi/platformdirs@unspecified"
+    }
+  ]
+}
